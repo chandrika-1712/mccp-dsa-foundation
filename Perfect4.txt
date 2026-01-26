@@ -1,0 +1,23 @@
+//method 4 for perfect Square
+import java.util.*;
+class Perfect4{
+ public static void main(String[] args){
+  Scanner sc=new Scanner(System.in);
+  int n=sc.nextInt();
+  System.out.println(p4(n));
+ }
+ public static String p4(int n){
+   int l=1;h=n;
+   //O(logn)
+   while(l<=h)
+    {
+     int m=(l+h)/2;
+     if(m*m==n)
+      return "YES";
+     else if(m*m<n)
+       l=m+1;
+     else
+      h=m-1;
+  }
+  return "NO";
+}
